@@ -19,6 +19,7 @@
     /* #FFB85D */
     --color-Xlight: #F3EDE0;
     /* #E1ECF0 */
+    --transition-speed: 200ms;
 }
 
 html {
@@ -103,7 +104,7 @@ body::-webkit-scrollbar-thumb {
     fill: var(--color-dark);
 }
 
-/* changing color svg while hovering */
+/* changing svg color while hovering */
 .nav-link:hover svg path {
     fill: var(--main-bg-color);
 }
@@ -279,23 +280,30 @@ h3 {
 @media only screen and (max-width: 600px) {
    
     .navbar {
-        bottom: 0.5em;
+        bottom: 0;
         width: 100vw;
         height: 5rem;
-        align-items: stretch;
+        opacity: 0.9;
     }
 
     .navbar:hover {
-        width: 100vw;
+        width: 100%;
     }
 
     .navbar:hover .nav-link svg {
         display: none;
     }
 
+    .nav-link:hover {
+        font-size: 0.5rem;
+        color: var(--main-bg-color);
+        background: none;   
+        opacity: 1;
+    }
+
     .nav-item {
         background-color: var(--color-Xlight);
-    }
+   }
 
     .nav-item:last-child {
         margin-top: 0;
@@ -311,8 +319,12 @@ h3 {
 
     .nav-link {
         justify-content: center;
+        height: 100%;
     }
-
+    .nav-link span {
+        font-size: 0.8rem;
+    }
+    
     main {
         margin: 0;
     }
