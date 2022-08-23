@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,900&display=swap');
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-bg-color: #090A0E; 
+    /* #030A04 */
+    --color-dark: #52584D;
+    /* #3B707D */
+    --color-medium: #9AB19A;
+    /* #FF5412 */
+    --color-light: #D9C1BB;
+    /* #FFB85D */
+    --color-Xlight: #F3EDE0;
+    /* #E1ECF0 */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: var(--main-bg-color);
+    font-family: 'Roboto Flex', cursive;
+}
+
+/* SCROLL BAR */
+
+body::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--color-dark);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--color-medium);
+}
+
+/* navbar */
+
+.navbar {
+    position: fixed;
+    background-color: var(--color-Xlight);
+    transition: width 200ms ease;
+}
+
+.navbar:hover {
+    width: 16rem;
+}
+
+.navbar:hover .link-text {
+    display: block;
+}
+
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-item {
+    transition: all 0.5s;
+    cursor: pointer;
+    padding: 0.5em;
+    width: 100%;
+}
+
+.nav-item span {
+    /* margin-right: 0.5em; */
+    font-weight: bold;
+    font-family: 'Roboto Flex';
+    line-height: 1.6250em;
+    vertical-align: top;
+    width: 60%;
+    text-align: center;
+}
+
+.nav-item svg {
+    max-height: 1.625em;
+    width: auto;
+    display: block;
+}
+
+.nav-item:last-child {
+    margin-top: auto;
+}  
+
+/****  magic trick = color svg *****/
+.nav-link svg path {
+    fill: var(--color-dark);
+}
+
+/* changing color svg while hovering */
+.nav-link:hover svg path {
+    fill: var(--main-bg-color);
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    height: 5em;
+    color: var(--color-dark);
+    text-decoration: none;
+    /* filter: grayscale(10%); */
+    opacity: 0.6;
+    border-radius: 10px;
+    transition: var(--transition-speed);
+}
+
+.nav-link:hover {
+    /* filter: grayscale(0%); */
+    background: var(--color-medium);
+    color: var(--main-bg-color);
+    opacity: 1;
+}
+
+.link-text {
+    display: none;
+    margin: 1em;
+}
+
+.nav-link svg {
+    min-width: 2em;
+    margin: 0 auto;
+}
+
+.logo {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--color-dark);
+    /* background: var(--bg-secondary); */
+    font-size: 1rem;
+    letter-spacing: 0.3ch;
+    width: 100%;
+    padding: 0.5em;
+}
+
+.logo .nav-link .link-text {
+    width: 60%;
+    text-align: center;
+}
+
+.logo svg {
+    transform: rotate(0deg);
+    transition: transform var(--transition-speed);
+    max-height: 2em;
+}
+
+.navbar:hover .logo svg {
+    /* vitesse de rotation */
+    transform: rotate(90deg);
+}
+
+
+
+/* BODY */
+.identification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3em;
+}
+
+/* BORDURE ARC EN CIEL */
+.photo {
+    position: relative;
+    width: auto;
+}
+
+/* creation des bordures are en ciel */
+/* before sera la bordure muicolore et after l'ombre multicolore */
+.photo::before, 
+.photo::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, var(--color-dark), var(--color-medium), var(--color-light), var(--color-Xlight), var(--color-dark), var(--color-medium), var(--color-light), var(--color-Xlight), var(--color-medium));
+    width: 100%;
+    height: 100%;
+    background-size: 500%;
+    /* z-index fait passer la box en avant pour pouvoir voir son contenu */
+    z-index: -1;
+    /* scale 1.02 permet d'agrandir les pseudos éléments befoer et after afin qu'ils soient visibles sous la box */
+    transform: scale(1.001);
+    animation: animate 20s infinite;
+}
+
+/* création de l'ombre (flou de 20px) multicolore */
+.photo::after {
+    filter: blur(20px);
+}
+
+@keyframes animate {
+    0% { background-position: 0 0;}
+    50% { background-position: 300% 0;}
+    100% { background-position: 0 0;}
+}    
+
+/* FIN BORDURE ARC EN CIEL */
+
+.photo img {
+    width: 240px;
+    max-width: 100%;
+    min-width: 100%;
+    padding: 0.3em;
+}
+
+.titre {
+    width: 50%;
+    text-align: center;
+}
+
+.titre h1 {
+    font-size: 12rem;
+    background: linear-gradient(to right, var(--color-Xlight), var(--color-dark));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.titre h2 {
+    color: var(--color-light);
+    font-size: 2rem;
+    opacity: 0.8;
+}
+
+/* PRESENTATION */
+
+.identification {
+    padding-bottom: 50px;
+}
+
+.presentation {
+    background: linear-gradient(var(--main-bg-color), var(--color-dark));
+}
+
+.suite {
+    background: linear-gradient(var(--color-dark), var(--color-medium));
+}
+
+.suite2 {
+    background: linear-gradient(var(--color-medium), var(--color-light));
+}
+
+.presentation, .suite, .suite2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.breffing, .blabla, .blabla2 {
+    width: 70%;
+    margin: 150px;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--color-Xlight);
+}
+
+/* Responsive small screens */
+@media only screen and (max-width: 600px) {
+   
+    .navbar {
+        bottom: 0.5em;
+        width: 100vw;
+        height: 5rem;
+        align-items: stretch;
+    }
+
+    .navbar:hover {
+        width: 100vw;
+    }
+
+    .navbar:hover .nav-link svg {
+        display: none;
+    }
+
+    .nav-item {
+        background-color: var(--color-Xlight);
+    }
+
+    .nav-item:last-child {
+        margin-top: 0;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+    }
+
+    .nav-link {
+        justify-content: center;
+    }
+
+    main {
+        margin: 0;
+    }
+    .titre {
+        width: 100%;
+    }
+    .titre h1 {
+        font-size: 2.1rem;
+
+    }
+    .titre h2 {
+        font-size: 1.2rem;
+    }
+    .identification {
+        display: flex;
+        flex-direction: column;
+    }
+    .photo {
+        margin-top: 50px;
+    }
+    .presentation, .suite, .suite2 {
+        display: flex;
+    }
+    .breffing, .blabla, .blabla2 {
+        margin: 0 auto;
+        padding: 20px 0;
+    }
+    .photo img {
+        width: 200px;
+    }
+}
+
+
+
+/* Responsives large screens */
+@media only screen and (min-width: 600px) {
+    .navbar {
+        top: 0;
+        width: 5rem;
+        height: 100vh;
+    }
+
+    .navbar:hover {
+        width: 16rem;
+    }
+
+    .navbar:hover .link-text {
+        display: inline;
+        transition: opacity var(--transition-speed);
+    }
+    .titre h1 {
+        font-size: 2.5rem;
+    }
+    .titre h2 {
+    font-size: 1.25rem;
+    }
+}
