@@ -190,7 +190,7 @@ body::-webkit-scrollbar-thumb {
     justify-content: center;
     position: relative;
     width: 60%;
-    margin-right: 300px;
+    margin-right: 280px;
     
 }
 
@@ -214,6 +214,7 @@ body::-webkit-scrollbar-thumb {
 .identification .titre .nom h2 {
     font-size: 3rem;
     padding-bottom: 30px;
+    color: var(--color-Xlight);
 }
 
 #premierTrait {
