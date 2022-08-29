@@ -458,7 +458,7 @@ h3 {
     background: var(--color-dark);
 }
 
-.grid1, .grid2 {
+.grid1, .grid2, .grid3 {
     display: grid;
     justify-content: center;
     grid-template: repeat(7, 100px) / repeat(3, 130px);
@@ -487,14 +487,14 @@ h3 {
     border-radius: 25px;
 }
 
-.video, .palette3D {
+.video, .palette3D, .smart {
     grid-area:  1 / 1 / 4 / 4;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.palette3D img {
+.palette3D img, .smart img {
     width: 300px;
     height: auto;
 }
