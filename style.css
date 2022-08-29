@@ -435,7 +435,7 @@ h3 {
     height: 63em;
     padding-top: 5em;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 6.25em;
 }
@@ -487,11 +487,16 @@ h3 {
     border-radius: 25px;
 }
 
-.video {
+.video, .palette3D {
     grid-area:  1 / 1 / 4 / 4;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.palette3D img {
+    width: 300px;
+    height: auto;
 }
 
 .titre1, .titre2, .titre3 {
