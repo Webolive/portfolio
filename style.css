@@ -606,7 +606,7 @@ h3 {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 450px;
+    height: 500px;
     padding-top: 5rem;
     background: linear-gradient(var(--color-medium), var(--color-dark) ,black 93%);
 }
