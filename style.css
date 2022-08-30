@@ -29,6 +29,7 @@
 html {
     scroll-behavior: smooth;
 }
+
 body{
     margin: 0;
     padding: 0;
@@ -172,13 +173,10 @@ body::-webkit-scrollbar-thumb {
 /* SECTION NOM ET PHOTO */
 
 .identification {
-    display: grid;
-        grid-template: repeat(4, 100px) / repeat(1, 1200px) 180px;
-    /* display: flex; */
-    /* align-items: center; */
-    /* justify-content: center; */
-    /* padding-top: 4em; */
-    /* margin-left: 10em; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background & texture */
     background-image: url(img/bg.jpg);
     background-size: cover;
     background-position: center;
@@ -190,11 +188,9 @@ body::-webkit-scrollbar-thumb {
 }
 
 .titre {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
+    display: grid;
+    grid-template: repeat(4, 100px) / repeat(1, 800px) 300px;
     position: relative;
-    width: 70%;
     padding-top: 4em;
 }
 
@@ -212,7 +208,6 @@ body::-webkit-scrollbar-thumb {
 
 .identification .titre .nom h1 {
     grid-area: 1 / 1 / 2 / 2;
-    display: flex;
     font-size: 5rem;
     padding-bottom: 0.3em;
     background: linear-gradient(to right, var(--color-dark), var(--color-Xlight));
@@ -229,10 +224,8 @@ body::-webkit-scrollbar-thumb {
 
 #premierTrait {
     grid-area: 3 / 1 / 4 / 2;
-    display: flex;
-    justify-content: left;
     height: 0.125em;
-    width: 25%;
+    width: 17%;
     background-color: var(--color-Xlight);
 }
 
@@ -241,17 +234,16 @@ body::-webkit-scrollbar-thumb {
 .words {
     grid-area: 4 / 1 / 5 / 2;
     height: 12.5em;
-    width: 65%;
     color: var(--main-bg-color);
-    line-height: 1.2em;
-    padding-top: 2em;
+    line-height: 1.5em;
+    padding-top: 0.5em;
 }
 
 .words span {
     font-size: 2rem;
     text-transform: uppercase;
     display: inline-block;
-    animation: move 4s ease-in-out infinite;
+    animation: move 5s ease-in-out infinite;
 }
  
 @keyframes move {
@@ -300,17 +292,13 @@ body::-webkit-scrollbar-thumb {
 
 /* Bordure arc en ciel */
 .photo {
-    grid-area: 1 / 2 / 2 / 3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    grid-area: 1 / 2 / 5 / 3;
     position: relative;
     max-height: 30em;
     max-width: auto;
-    margin-top: 2.5em;
-    width: 18.75em;
-    height: 26em;
-    right: 8em;
+    width: 15em;
+    height: 22em;
+    margin: 30px;
 }
 
 .photo img {
@@ -432,17 +420,17 @@ h3 {
 
 #containerCartes {
     background: linear-gradient(var(--color-light), var(--color-medium));
-    height: 63em;
+    height: 50em;
     padding-top: 5em;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 6.25em;
+    padding: 10em;
 }
 
 .boxCard {
-    height: 780px;
-    width: 420px;
+    height: 580px;
+    width: 320px;
     overflow: hidden;
     border: 3px solid var(--color-light);
     background: var(--color-medium);
@@ -454,16 +442,16 @@ h3 {
     align-items: center;
 }
 
-.boxCard:nth-child(2) {
+.boxCard:nth-child(2), .boxCard:nth-child(4) {
     background: var(--color-dark);
 }
 
 .grid1, .grid2, .grid3 {
     display: grid;
     justify-content: center;
-    grid-template: repeat(7, 100px) / repeat(3, 130px);
-    width: 400px;
-    height: 700px;
+    grid-template: repeat(7, 73px) / repeat(3, 90px);
+    width: 300px;
+    height: 500px;
     position: absolute;
     background: var(--color-medium);
     
@@ -495,7 +483,7 @@ h3 {
 }
 
 .palette3D img, .smart img {
-    width: 300px;
+    width: 250px;
     height: auto;
 }
 
@@ -506,7 +494,7 @@ h3 {
     align-items: center;
     text-align: center;
     color: var(--color-Xlight);
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 5;
     text-transform: uppercase;
     text-shadow: 2px 2px 3px #000000;
@@ -522,10 +510,10 @@ h3 {
     align-items: center;
     text-align: center;
     color: var(--color-dark);
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 5rem;
     text-shadow: 2px 2px 3px var(--color-Xlight);
-    padding: 50px;
+    padding: 0 30px;
     padding-top: 15px;
     height: auto;
 }
@@ -569,7 +557,7 @@ h3 {
     border-radius: 10px 10px 0px 0px;
     height: 100%;
     width: 26.25em;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: #52584D;
     padding-top: 3.125em;
     line-height: 2em;
@@ -603,11 +591,9 @@ h3 {
 
 .containerVideoCitation {
     display: flex;
-    align-items: center;
     justify-content: center;
-    flex-direction: column;
     height: 500px;
-    padding-top: 5rem;
+    padding-top: 30px;
     background: linear-gradient(var(--color-medium), var(--color-dark) ,black 93%);
 }
 
@@ -642,7 +628,31 @@ h3 {
     opacity: 0.94;
 }
 
+#bio .identification {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bioDescription {
+    grid-area: 1 / 1 / 5 / 3;
+    background-image: url(img/brickWall.jpg);
+    background-size: cover;
+    background-position: center;
+    place-content: center;
+    padding-bottom: 30px;
+    width: 70%;
+}
 
+.identification .bioDescription h5 {
+    font-size: 4rem;
+    color: var(--color-medium);
+    padding: 10px 0 0 30px;
+}
+
+.identification .bioDescription p {
+    font-size: 1rem;
+    padding: 10px 30px 0 30px;
+}
 
 
 
