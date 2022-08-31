@@ -881,12 +881,16 @@ img {
         height: 700px;
     }
 
+    .bioDescription {
+        margin-bottom: 100px;
+    }
+
     .identification .bioDescription h5 {
         font-size: 1.1rem;
     }
 
     #slider {
-        height: 35em;
+        height: 45em;
     }
 
     .slider-container {
