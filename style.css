@@ -433,12 +433,12 @@ h3 {
 }
 
 .boxCard {
-    height: 580px;
-    width: 320px;
+    height: 36.25em;
+    width: 20em;
     overflow: hidden;
     border: 3px solid var(--color-light);
     background: var(--color-medium);
-    border-radius: 20px;
+    border-radius: 1.25em;
     -webkit-box-shadow: 13px 14px 26px 2px #000000; 
     box-shadow: 13px 14px 26px 2px #000000;
     display: flex;
@@ -454,8 +454,8 @@ h3 {
     display: grid;
     justify-content: center;
     grid-template: repeat(7, 73px) / repeat(3, 90px);
-    width: 300px;
-    height: 500px;
+    width: 18.75em;
+    height: 31.25em;
     position: absolute;
     background: var(--color-medium);
     
@@ -492,12 +492,12 @@ h3 {
 }
 
 .palette3D img {
-    width: 180px;
+    width: 11.25em;
     height: auto;
 }
 
 .smart img {
-    width: 250px;
+    width: 15.625em;
     height: auto;
 }
 
@@ -508,7 +508,7 @@ h3 {
     align-items: center;
     text-align: center;
     color: var(--color-Xlight);
-    font-size: 20px;
+    font-size: 1.2rem;
     font-weight: 5;
     text-transform: uppercase;
     text-shadow: 2px 2px 3px #000000;
@@ -524,8 +524,8 @@ h3 {
     align-items: center;
     text-align: center;
     color: var(--main-bg-color);
-    font-size: 15px;
-    font-weight: 5rem;
+    font-size: 0.9rem;
+    font-weight: 400;
     text-shadow: 3px 3px 3px var(--color-Xlight);
     padding: 0 10px;
     height: auto;
@@ -605,8 +605,8 @@ h3 {
 .containerVideoCitation {
     display: flex;
     justify-content: center;
-    height: 500px;
-    padding-top: 30px;
+    height: 31.25em;
+    padding-top: 1.875em;
     background: linear-gradient(var(--color-medium), var(--color-dark) ,black 93%);
 }
 
@@ -617,7 +617,7 @@ h3 {
     position: relative;
     background-color: black;
     border: 3px solid var(--color-Xlight);
-    border-radius: 20px;
+    border-radius: 1.25em;
     -webkit-box-shadow: 5px 5px 15px 5px #D9C1BB; 
     box-shadow: 5px 5px 15px 5px #D9C1BB;
     width: 30em;
@@ -630,7 +630,7 @@ h3 {
     text-align: center;
     color: white;
     font-size: 1rem;
-    padding: 0 10px;
+    padding: 0 0.625;
     z-index: 1;
 }
 
@@ -652,36 +652,36 @@ h3 {
     background-size: cover;
     background-position: center;
     place-content: center;
-    padding-bottom: 30px;
+    padding-bottom: 1.875em;
     width: 70%;
 }
 
 .identification .bioDescription h5 {
     font-size: 4rem;
     color: var(--color-medium);
-    padding: 10px 0 0 30px;
+    padding: 0.5em 0 0 0.5em;
 }
 
 .identification .bioDescription p {
     font-size: 1rem;
-    padding: 10px 30px 0 30px;
+    padding: 0.625em 1.875em 0 1.875em;
 }
 
 
 /* SLIDING PICTURES */
 
 #slider {
-    height: 700px;
+    height: 43.75em;
 }
 
 img {
     max-width: 100%;
   }
   .slider-container {
-    max-width: 800px;
+    max-width: 50em;
     position: relative;
     margin: auto;
-    height: 550px;
+    height: 34.375em;
     overflow: hidden;
   }
   .menu {
@@ -695,10 +695,10 @@ img {
   .menu label {
     cursor: pointer;
     display: inline-block;
-    width: 10px;
-    height: 10px;
+    width: 0.625em;
+    height: 0.625em;
     background: var(--color-Xlight);
-    border-radius: 50px;
+    border-radius: 3.125em;
     margin: 0 0.2em 1em;
   }
   .menu label:hover, .menu label:focus {
@@ -709,7 +709,7 @@ img {
   }
   .slide-img {
     width: 100%;
-    height: 500px;
+    height: 31.25em;
     position: absolute;
     top: 0;
     left: 100%;
@@ -724,8 +724,8 @@ img {
 
 #copyright {
     color: var(--color-Xlight);
-    padding-left: 200px;
-    margin-top: 100px;
+    padding-left: 12.50em;
+    margin-top: 6.25em;
 }
 
 
