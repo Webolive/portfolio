@@ -882,7 +882,7 @@ img {
     }
 
     .bioDescription {
-        margin-bottom: 100px;
+        margin-bottom: 150px;
     }
 
     .identification .bioDescription h5 {
@@ -890,7 +890,7 @@ img {
     }
 
     #slider {
-        height: 45em;
+        height: 35em;
     }
 
     .slider-container {
