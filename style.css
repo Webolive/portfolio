@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400;8..144,900&display=swap');
 
 *,
 ::before,
@@ -209,6 +209,7 @@ body::-webkit-scrollbar-thumb {
 .identification .titre .nom h1 {
     grid-area: 1 / 1 / 2 / 2;
     font-size: 5rem;
+    font-weight: 900;
     padding-bottom: 0.3em;
     background: linear-gradient(to right, var(--color-dark), var(--color-Xlight));
     -webkit-background-clip: text;
@@ -235,12 +236,14 @@ body::-webkit-scrollbar-thumb {
     grid-area: 4 / 1 / 5 / 2;
     height: 12.5em;
     color: var(--main-bg-color);
+    font-weight: 900;
     line-height: 1.5em;
     padding-top: 0.5em;
 }
 
 .words span {
     font-size: 2rem;
+    font-weight: 900;
     text-transform: uppercase;
     display: inline-block;
     animation: move 5s ease-in-out infinite;
@@ -360,13 +363,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 .texts {
-       flex-direction: column;
+    flex-direction: column;
 }
 
 #deuxiemeTrait {
-    height: 2px;
+    height: 3px;
     width: 40%;
-    margin-top: 100px;
+    margin-top: 6.25em;
     background-color: var(--main-bg-color);
     box-shadow: 1px 3px 3px var(--color-Xlight);
 }
@@ -411,9 +414,10 @@ body::-webkit-scrollbar-thumb {
 h3 {
     text-align: center;
     font-size: 1.2rem;
-    color: var(--color-dark);
+    font-weight: 400;
+    color: var(--main-bg-color);
     padding: 1em;
-    width: 70%;
+    width: 90%;
 }
 
 /* CARDS with SLIDE UP ANIMATION */
@@ -461,8 +465,13 @@ h3 {
     background: var(--color-dark);
     width: 100%;
     height: 100%;
-    color: var(--color-light);
-    text-shadow: 2px 2px 3px var(--main-bg-color);
+    color: var(--color-Xlight);
+    text-shadow: 3px 3px 3px var(--main-bg-color);
+}
+
+.details1 h4, .details2 h4 {
+    font-weight: 400;
+    
 }
 
 .grid2 {
@@ -482,7 +491,12 @@ h3 {
     align-items: center;
 }
 
-.palette3D img, .smart img {
+.palette3D img {
+    width: 180px;
+    height: auto;
+}
+
+.smart img {
     width: 250px;
     height: auto;
 }
@@ -500,7 +514,7 @@ h3 {
     text-shadow: 2px 2px 3px #000000;
 }
 
-.Grid1.titre1 h4 {
+.Grid1 .titre1 h4 {
     text-align: center;
 }
 
@@ -509,12 +523,11 @@ h3 {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: var(--color-dark);
+    color: var(--main-bg-color);
     font-size: 15px;
     font-weight: 5rem;
-    text-shadow: 2px 2px 3px var(--color-Xlight);
-    padding: 0 30px;
-    padding-top: 15px;
+    text-shadow: 3px 3px 3px var(--color-Xlight);
+    padding: 0 10px;
     height: auto;
 }
 
