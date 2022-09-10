@@ -643,7 +643,7 @@ h3 {
 
 #bio .identification:after {
     background: black;
-    opacity: 0.94;
+    opacity: 0.93;
 }
 
 #bio .identification {
@@ -708,7 +708,7 @@ img {
     margin: 0 0.2em 1em;
 }
 .menu label:hover, .menu label:focus {
-    background: #1c87c9;
+    background: var(--color-medium);
 }
 .slide-input{
     opacity: 0;
@@ -728,10 +728,28 @@ img {
     transition: left 0.65s ease-out;
 }
 
-#copyright {
+#copyrightEtIcons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
     color: var(--color-Xlight);
-    padding-left: 12.50em;
-    margin-top: 6.25em;
+}
+
+#icons {
+    width: 50%;
+    text-align: right;
+}
+#icons a {
+    display: inline-block;
+    padding: 0 20px;
+}
+.fa-facebook {
+    color: rgb(1, 101, 225);
+}
+
+.fa-linkedin {
+    color:rgb(0, 119, 181)
 }
 
 
