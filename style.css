@@ -64,7 +64,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .navbar:hover {
-    width: 16em;
+    width: 200px;
 }
 
 .navbar:hover .link-text {
@@ -746,12 +746,68 @@ img {
 }
 .fa-facebook {
     color: rgb(1, 101, 225);
+    font-size: 2rem;
 }
 
 .fa-linkedin {
-    color:rgb(0, 119, 181)
+    color:rgb(0, 119, 181);
+    font-size: 2rem;
 }
 
+/* #icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-bg-color);
+    text-align: center;
+}
+#icons ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#icons ul li{
+    position: relative;
+    display: block;
+    color: var(--color-Xlight);
+    font-size: 30px;
+    height: 60px;
+    width: 60px;
+    background: var(--main-bg-color);
+    line-height: 60px;
+    border-radius: 50%;
+    margin: 0 15px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#icons ul li::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: inherit;
+    width: inherit;
+    border-radius: 50%;
+    transform: scale(0.9);
+    z-index: -1;
+    transition: 0.5s;
+}
+#icons ul li:hover:nth-child(1){
+    box-shadow: 0 0 30px #4267B2;
+    text-shadow: 0 0 30px #4267B2;
+    background-color: var(--main-bg-color);
+}
+#icons ul li:hover:nth-child(3){
+    box-shadow: 0 0 30px #0077b5;
+    text-shadow: 0 0 30px #0077b5;
+    background-color: var(--main-bg-color);
+}
+#icons .fa-facebook-f:hover {
+    color: #4267B2;
+}
+#icons .fa-linkedin-in:hover {
+    color: #0077b5;
+} */
 
   
 /* Responsive small screens */
@@ -924,7 +980,6 @@ img {
         height: 15em;
         margin-left: 20px;
     }
-
     #copyright {
         text-align: left;
         margin-top: 2em;
@@ -943,24 +998,18 @@ img {
         height: 100vh;
         z-index: 100;
     }
-
     .navbar:hover {
         width: 16rem;
     }
-
     .navbar:hover .link-text {
         display: inline;
         transition: opacity var(--transition-speed);
     }
-
-
-
     .identification {
         padding: 0;
         margin: 0;
         height: 60em;
     }
-
     .titre {
         display: flex;
         justify-content: center;
@@ -969,34 +1018,26 @@ img {
         margin-top: 50px;
         width: 100vw;
     }
-
     .identification .titre .nom h1 {
         font-size: 3rem;
     }
     .identification .titre .nom h2 {
         font-size: 2rem;
     }   
-
     .words {
         margin-top: 50px;
     }
-
     .photo {
         margin-top: 0px;
     }
-
     .briefing, .briefing2 {
         width: 80vw;
     }
-
     #containerCartes {
         flex-direction: column;
         height: 200em;
     }
-
     .slide-img {
         margin-left: 60px;
     }
-
-
 }
